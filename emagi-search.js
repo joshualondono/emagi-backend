@@ -1,5 +1,5 @@
-const words = require('./emagi-words.js');
-const symbols = require('./emagi-symbols.js');
+let words = ['hungry', 'rice', 'cheese'];
+let symbols = ['eat', 'sushi', 'eggs'];
 
 const emagiSearch = function(str){
 
@@ -8,14 +8,14 @@ const emagiSearch = function(str){
 
     for(let i = 0; i < words.length; i++){
 
-    if(word === str){
+    if(words[i] === str){
       const emojiIndex = i
-      result = str + symbols[emojiIndex]
+      result.push(symbols[emojiIndex])
     }
   }
 
   return result
 }
 
-
+emagiSearch('hungry')
 
